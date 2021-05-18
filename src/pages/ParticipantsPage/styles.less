@@ -1,0 +1,41 @@
+@input-width: 100%;
+@input-height: 30px;
+@margin-top-width:10px;
+@margin-bottom-width:10px;
+@margin-width:5px;
+
+
+.participantContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
+  .factForm{
+    width: 80%;
+    .questionsInput {
+      width: @input-width;
+      height: @input-height;
+    }
+    .btnContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: @margin-top-width;
+      .addQuestionBtn{
+        margin-right: @margin-width;
+      }
+    }
+  }
+
+
+
+
+
+}
+
+.addPersonalDetailsContainer{
+  display: flex;
+}
