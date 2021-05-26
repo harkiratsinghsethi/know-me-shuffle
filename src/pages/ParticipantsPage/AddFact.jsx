@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './styles.less'
 import {DefaultButton} from '@fluentui/react';
-import {AddPersonalDetails} from './AddPersonalDetails'
+import {AddPersonalDetails} from './AddPersonalDetails.tsx'
 import constants from "../../utils/CONSTANTS";
 
 const Participants = () => {
