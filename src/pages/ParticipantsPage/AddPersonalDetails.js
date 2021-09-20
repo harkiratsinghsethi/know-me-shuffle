@@ -5,6 +5,7 @@ import constants  from "../../utils/CONSTANTS";
 export const AddPersonalDetails =({setIsNameAdded}) =>{
     const clickHandler =() =>{
         setIsNameAdded(true)
+
     }
 
     return(

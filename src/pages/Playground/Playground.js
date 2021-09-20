@@ -1,7 +1,10 @@
 import {useEffect, useState} from 'react'
 import './styles.css'
-import testData from '../utils/TestData'
-import Participants from './ParticipantsPage/AddFact'
+import testData from '../../utils/TestData'
+import {DefaultButton} from '@fluentui/react';
+import constants from '../../utils/CONSTANTS';
+import Participants from '../ParticipantsPage/AddFact'
+import FindEmployee from './Test';
 const HomePage = () => {
     let count = 0
     let [data, setData] = useState(testData)
@@ -33,19 +36,6 @@ const HomePage = () => {
         })
     }
 
-    // let delay = (ms) => {
-    //     return new Promise(resolve => {
-    //         // console.log(resolve)
-    //         setTimeout(() => {
-    //             resolve()
-    //             runInterval()
-    //
-    //
-    //         }, ms)
-    //     })
-    //
-    // }
-
     const getRandomQuestion = () => {
         runInterval()
         // console.log(randomNum, data[randomNum])
@@ -58,19 +48,20 @@ const HomePage = () => {
         getRandomQuestion()
     }
 
-    return (<div>
+    return (<div className='playgroundContainer'>
         {isStarted
             ? <div>
                 <div>
                     {question}
                 </div>
-                <button disabled={isDisabled} onClick={() => getRandomQuestion()}>Shuffle</button>
+                <DefaultButton disabled={isDisabled} onClick={() => getRandomQuestion()} text={constants.SHUFFLE_TEXT}/>
+                <DefaultButton text={constants.REVEAL_TEXT}/>
             </div>
             : <div>
-                <button onClick={() => startShuffle()}>Lets Play</button>
+                <DefaultButton onClick={() => startShuffle()} text={constants.LETS_PLAY_TEXT}/>
             </div>}
 
-
+    {<FindEmployee/>}
     </div>)
 }
 

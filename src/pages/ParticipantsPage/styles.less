@@ -1,9 +1,4 @@
-@input-width: 100%;
-@input-height: 30px;
-@margin-top-width:10px;
-@margin-bottom-width:10px;
-@margin-width:5px;
-
+@import '../../variables.less';
 
 .participantContainer {
   display: flex;
@@ -14,7 +9,7 @@
   min-height: 100vh;
 
   .factForm{
-    width: 80%;
+    width: @page-width;
     .questionsInput {
       width: @input-width;
       height: @input-height;

@@ -1,0 +1,56 @@
+@import '../../variables.less';
+
+.createRoomContainer {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    min-height     : 100vh;
+
+
+    .formContainerCreateRoom {
+        width          : 40%;
+        border         : 1px solid white;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        text-align     : center;
+        padding        : 30px;
+
+        .createRoomNameInput {
+            width : @input-width;
+            height: @input-height;
+
+        }
+
+        .createRoomBtn {
+            margin-top: @margin-top-width;
+            width     : @btn-width;
+        }
+
+        .line {
+            width: 80%;
+
+            // border-bottom: 0.1px solid white;
+            position: relative;
+            display : block;
+
+            border    : 0;
+            border-top: 1px solid #ccc;
+            margin    : 1em 0;
+            padding   : 0;
+        }
+
+
+
+        // .formContainer{
+        //     width: @page-width;
+        // }
+        // .createRoomNameInput {
+        //     width: @input-width;
+        //     height: @input-height;
+
+    }
+}

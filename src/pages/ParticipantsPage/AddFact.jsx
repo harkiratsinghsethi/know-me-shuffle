@@ -2,6 +2,7 @@ import {useState} from 'react'
 import './styles.less'
 import {DefaultButton} from '@fluentui/react';
 import {AddPersonalDetails} from './AddPersonalDetails'
+import {ThankYouAndAddMore} from "./ThankyouAndAddMore.tsx";
 import constants from "../../utils/CONSTANTS";
 
 const Participants = () => {
@@ -10,10 +11,8 @@ const Participants = () => {
 
     return (
         <div className='participantContainer'>
-
             {!isFactAdded ?
                 (!isNameAdded ? <AddPersonalDetails setIsNameAdded={setIsNameAdded}/> :
-
                         <div className='factForm'><h1>Enter an unknown fact about you!</h1>
                             <input type='text' id='question' className="questionsInput"/>
                             <div className='btnContainer'>
@@ -23,16 +22,13 @@ const Participants = () => {
                             </div>
                         </div>
 
-                ) : <div>Thank You!</div>
-
+                ) : <ThankYouAndAddMore/>
             }
         </div>
     )
 
     function doneCLickHandler() {
-        console.log(isFactAdded)
         setIsFactAdded(true)
-
     }
 }
 export default Participants
