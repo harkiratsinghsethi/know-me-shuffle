@@ -11,8 +11,13 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "@types/jest": "^26.0.23",
+<<<<<<< HEAD
     "@types/node": "^15.6.1",
     "@types/react": "^17.0.8",
+=======
+    "@types/node": "^15.3.1",
+    "@types/react": "^17.0.6",
+>>>>>>> 17f1b4070d7ceb0c77edefc467648b9500cae715
     "@types/react-dom": "^17.0.5",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
